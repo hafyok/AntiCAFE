@@ -50,13 +50,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Employee", "Before data");
 
         AppDatabase db = AppDatabase.getInstance(this);
-        /*Employee employee = new Employee();
-        employee.id = 1;
-        employee.name = "John Smith";
-        employee.salary = 10000;*/
 
 
-        Log.d("Employee", "After data");
+
+        Log.d("Employee", db.employeeDao().getAll().toString());
 
 
     }

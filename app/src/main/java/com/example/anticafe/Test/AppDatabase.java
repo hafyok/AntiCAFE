@@ -32,9 +32,7 @@ public abstract class AppDatabase extends RoomDatabase {
         if (INSTANCE == null){
             synchronized (AppDatabase.class){
                 if (INSTANCE == null){
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            AppDatabase.class,
-                            "datebayo")
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "datebayo")
                             .addCallback(new Callback() {
                                 @Override
                                 public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -47,6 +45,7 @@ public abstract class AppDatabase extends RoomDatabase {
                                     });
                                 }
                             })
+                            .allowMainThreadQueries()
                             .build();
                 }
             }
