@@ -8,10 +8,9 @@ import android.app.Application;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.anticafe.Test.AppDatabase;
-import com.example.anticafe.Test.AppRepository;
-import com.example.anticafe.Test.Employee;
-import com.example.anticafe.Test.EmployeeDao;
+
+import com.example.anticafe.Database.AppDatabase;
+import com.example.anticafe.Database.AppRepository;
 import com.example.anticafe.R;
 
 import java.util.List;
@@ -47,14 +46,15 @@ public class MainActivity extends AppCompatActivity {
         /*db = Room.databaseBuilder(this, AppDatabase.class, "database")
                 .build();*/
 
-        Log.d("Employee", "Before data");
+        /*Log.d("Employee", "Before data");
 
         AppDatabase db = AppDatabase.getInstance(this);
 
 
 
         Log.d("Employee", db.employeeDao().getAll().toString());
-
+*/
+        ServiceLocator.init(getApplicationContext());
 
     }
 

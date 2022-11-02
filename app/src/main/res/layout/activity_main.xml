@@ -15,4 +15,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <fragment
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.anticafe.View.RoomsFragment"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
