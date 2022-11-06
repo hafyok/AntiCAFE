@@ -1,4 +1,4 @@
-package adapters;
+package com.example.anticafe.View.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +12,7 @@ import com.example.anticafe.databinding.RoomsElementBinding;
 
 import java.util.List;
 
-import adapters.viewHolders.RoomsViewHolder;
+import com.example.anticafe.View.adapters.viewHolders.RoomsViewHolder;
 
 public class RoomsAdapter extends RecyclerView.Adapter<RoomsViewHolder> {
     private final List<String> rooms;

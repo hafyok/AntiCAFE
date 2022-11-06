@@ -24,36 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-/*
-        AppDatabase db =  null;
-        db = Room.databaseBuilder(this, AppDatabase.class, "database")
-                .build();
-
-
-        EmployeeDao employeeDao = db.employeeDao();
-
-        Employee employee = new Employee();
-        employee.id = 1;
-        employee.name = "John Smith";
-        employee.salary = 10000;
-
-        employeeDao.insert(employee);
-        List<Employee> employees = employeeDao.getAll();
-        Employee employee1 = employeeDao.getById(1);
-*/
-
-        //AppDatabase db = App.getInstance().getDatabase();
-        /*db = Room.databaseBuilder(this, AppDatabase.class, "database")
-                .build();*/
-
-        /*Log.d("Employee", "Before data");
-
-        AppDatabase db = AppDatabase.getInstance(this);
-
-
-
-        Log.d("Employee", db.employeeDao().getAll().toString());
-*/
         ServiceLocator.init(getApplicationContext());
 
     }

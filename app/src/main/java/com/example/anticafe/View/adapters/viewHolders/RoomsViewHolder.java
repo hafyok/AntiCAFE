@@ -1,9 +1,7 @@
-package adapters.viewHolders;
+package com.example.anticafe.View.adapters.viewHolders;
 
-import android.view.View;
 import android.widget.RadioButton;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.anticafe.databinding.RoomsElementBinding;

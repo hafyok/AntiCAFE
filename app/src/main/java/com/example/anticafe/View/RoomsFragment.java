@@ -15,15 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.anticafe.MainActivity;
 import com.example.anticafe.Model.Employee;
-import com.example.anticafe.R;
 import com.example.anticafe.ViewModels.RoomsViewModel;
 import com.example.anticafe.databinding.RoomsFragmentBinding;
 
-import java.util.stream.Collectors;
-
-import adapters.RoomsAdapter;
+import com.example.anticafe.View.adapters.RoomsAdapter;
 
 public class RoomsFragment extends Fragment {
     private RoomsViewModel mViewModel;
