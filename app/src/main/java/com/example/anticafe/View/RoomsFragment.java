@@ -75,14 +75,16 @@ public class RoomsFragment extends Fragment {
 
     public void addEvent(){
         Log.d("Calendar", "Begin func");
-        /*Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
-        Calendar beginTime = Calendar.getInstance().set(2012, 0, 19, 7, 30);
-        Calendar endTime = Calendar.getInstance().set(2012, 0, 19, 10, 30);
+        Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
+       /* Calendar beginTime = Calendar.getInstance();
+        Calendar endTime = Calendar.getInstance();
         calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
-        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
-        calendarIntent.putExtra(CalendarContract.Events.TITLE, "Testsss");
-        calendarIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Locationnn");*/
-        Calendar cal = Calendar.getInstance();
+        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());*/
+        calendarIntent.putExtra(CalendarContract.Events.TITLE, "Мероприятие в AntiCAFE");
+        calendarIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "AntiCAFE, Moscow");
+        startActivity(calendarIntent);
+
+        /*Calendar cal = Calendar.getInstance();
         Intent intent = new Intent(Intent.ACTION_EDIT);
         intent.setType("vnd.android.cursor.item/event");
         intent.putExtra("beginTime", cal.getTimeInMillis());
@@ -90,7 +92,7 @@ public class RoomsFragment extends Fragment {
         intent.putExtra("rrule", "FREQ=YEARLY");
         intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
         intent.putExtra("title", "Бронь комнаты");
-        startActivity(intent);
+        startActivity(intent);*/
         Log.d("Calendar", "End func");
 
     }
