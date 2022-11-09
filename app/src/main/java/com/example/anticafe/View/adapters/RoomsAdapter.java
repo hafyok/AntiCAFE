@@ -34,12 +34,9 @@ public class RoomsAdapter extends RecyclerView.Adapter<RoomsViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull RoomsViewHolder holder, int position) {
         holder.getRadioButton().setText(rooms.get(position));
-        //holder.getRadioButton().setChecked(roomsFragment.getChangingRooms().getValue().equals(currencies.get(position)));
         holder.getRadioButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //roomsFragment.getChangingCurrency().setValue(currencies.get(position));
-                //currenciesFragment.dismiss();
             }
         });
     }

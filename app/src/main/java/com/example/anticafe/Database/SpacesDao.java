@@ -19,7 +19,7 @@ public interface SpacesDao {
     LiveData<List<Spaces>> getAll();
 
     @Query("SELECT * FROM spaces WHERE id = :id")
-    com.example.anticafe.Model.Spaces getById(long id);
+    Spaces getById(long id);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Spaces spaces);

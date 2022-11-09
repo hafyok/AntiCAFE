@@ -25,6 +25,9 @@ public class Spaces {
     @ColumnInfo
     public int price;
 
+    @ColumnInfo
+    public int booking;
+
     public int getId() {
         return id;
     }
