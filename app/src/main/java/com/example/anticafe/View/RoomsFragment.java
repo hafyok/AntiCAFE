@@ -82,10 +82,7 @@ public class RoomsFragment extends Fragment {
     public void addEvent(){
         Log.d("Calendar", "Begin func");
         Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
-        /*Calendar beginTime = Calendar.getInstance();
-        Calendar endTime = Calendar.getInstance();
-        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
-        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());*/
+
         Calendar cal = Calendar.getInstance();
         long startTime = cal.getTimeInMillis() + 24*60*60*1000;
         long endTime = startTime + 60 * 180 * 1000;
