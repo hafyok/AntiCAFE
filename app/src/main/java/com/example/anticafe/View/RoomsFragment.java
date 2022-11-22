@@ -59,7 +59,6 @@ public class RoomsFragment extends Fragment {
 
         binding.RoomsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         return v;
-        //return inflater.inflate(R.layout.rooms_fragment, container, false);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -92,25 +91,7 @@ public class RoomsFragment extends Fragment {
         calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
 
         startActivity(calendarIntent);
-        /*ContentValues contentEvent = new ContentValues();
-        contentEvent.put("calendar_id", 1);
-        contentEvent.put("title", "Wedding");
-        contentEvent.put("eventLocation", "New York");
-        contentEvent.put("dtstart","1335432431000");
-        contentEvent.put("dtend","1335436031000");
 
-        Uri eventsUri = Uri.parse("content://com.android.calendar/events");
-        startActivity();*/
-
-        /*Calendar cal = Calendar.getInstance();
-        Intent intent = new Intent(Intent.ACTION_EDIT);
-        intent.setType("vnd.android.cursor.item/event");
-        intent.putExtra("beginTime", cal.getTimeInMillis());
-        intent.putExtra("allDay", true);
-        intent.putExtra("rrule", "FREQ=YEARLY");
-        intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
-        intent.putExtra("title", "Бронь комнаты");
-        startActivity(intent);*/
         Log.d("Calendar", "End func");
 
     }
