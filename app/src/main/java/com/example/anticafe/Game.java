@@ -3,10 +3,12 @@ package com.example.anticafe;
 public class Game {
     private int id;
     private String name;
+    private String background_img;
 
-    public Game(int id, String name) {
+    public Game(int id, String name, String background_img) {
         this.id = id;
         this.name = name;
+        this.background_img = background_img;
     }
 
     public int getId() {
@@ -23,5 +25,13 @@ public class Game {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getBackground_img() {
+        return background_img;
+    }
+
+    public void setBackground_img(String background_img) {
+        this.background_img = background_img;
     }
 }

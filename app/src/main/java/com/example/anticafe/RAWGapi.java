@@ -6,5 +6,5 @@ import retrofit2.http.Query;
 
 public interface RAWGapi {
     @GET("games")
-    Call<PaginatedGamesPOJO> getListOfGames(@Query("key") String apiKey/*@Query("results") String results*/);
+    Call<PaginatedGamesPOJO> getListOfGames(@Query("key") String apiKey);
 }

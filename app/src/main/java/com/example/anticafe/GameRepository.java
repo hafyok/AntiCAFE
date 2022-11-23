@@ -48,7 +48,8 @@ public class GameRepository {
                 if (response.isSuccessful()){
                     if (response.body() != null) {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                            result.setValue(response.body().getResults().stream().map(pojo -> new Game(pojo.getId(), pojo.getName())).collect(Collectors.toList()));
+                            result.setValue(response.body().getResults().stream().map(pojo -> new Game(pojo.getId(),
+                                    pojo.getName(), pojo.getBackground_img())).collect(Collectors.toList()));
                         }
                     }
                 }else {
