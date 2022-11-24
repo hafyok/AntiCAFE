@@ -1,4 +1,4 @@
-package com.example.anticafe;
+package com.example.anticafe.Model.POJO;
 
 import android.util.Log;
 

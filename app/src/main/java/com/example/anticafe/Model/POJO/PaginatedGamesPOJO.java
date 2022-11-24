@@ -1,18 +1,14 @@
-package com.example.anticafe;
+package com.example.anticafe.Model.POJO;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import com.example.anticafe.Model.POJO.GamePOJO;
 
 import java.util.List;
 
 public class PaginatedGamesPOJO {
-//    @SerializedName("count")
     private int count;
 
-//    @SerializedName("next")
     private String next;
 
-//    @SerializedName("previous")
     private String  previous;
 
     private List<GamePOJO> results;

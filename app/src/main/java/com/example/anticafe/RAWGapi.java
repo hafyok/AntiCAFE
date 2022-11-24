@@ -1,5 +1,7 @@
 package com.example.anticafe;
 
+import com.example.anticafe.Model.POJO.PaginatedGamesPOJO;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

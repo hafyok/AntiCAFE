@@ -11,14 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.anticafe.Game;
-import com.example.anticafe.Model.Employee;
-import com.example.anticafe.PaginatedGamesPOJO;
+import com.example.anticafe.Model.Game;
 import com.example.anticafe.View.adapters.PeopleAdapter;
 import com.example.anticafe.ViewModels.PeopleViewModel;
 import com.example.anticafe.databinding.FragmentPeopleBinding;
@@ -31,7 +28,6 @@ public class PeopleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         binding = FragmentPeopleBinding.inflate(inflater, container, false);
 
         mViewModel = new ViewModelProvider(this).get(PeopleViewModel.class);
@@ -43,10 +39,10 @@ public class PeopleFragment extends Fragment {
             binding.peopleRecyclerView.setAdapter(
                     new PeopleAdapter(
                             this,
-                            games.stream().map(Game::getName).collect(toList())
+                            games.stream().map(Game::getName).collect(toList()),
+                            games.stream().map(Game::getBackground_img).collect(toList())
                     )
             );
-
             /*for (int i = 1; i < 20; i++){
                 Log.d("PeopleFragment_Anticafe", games.get(i).getName());
                 if (games.get(i).getBackground_img() == null){

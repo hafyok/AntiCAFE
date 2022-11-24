@@ -1,4 +1,4 @@
-package com.example.anticafe;
+package com.example.anticafe.Model;
 
 public class Game {
     private int id;

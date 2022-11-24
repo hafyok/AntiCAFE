@@ -2,12 +2,12 @@ package com.example.anticafe;
 
 import android.os.Build;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.anticafe.View.PeopleFragment;
+import com.example.anticafe.Model.Game;
+import com.example.anticafe.Model.POJO.PaginatedGamesPOJO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
