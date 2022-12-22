@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.anticafe.Model.Game;
+import com.example.anticafe.Model.Person;
+import com.example.anticafe.ServiceLocator;
 import com.example.anticafe.View.adapters.PeopleAdapter;
 import com.example.anticafe.ViewModels.PeopleViewModel;
 import com.example.anticafe.databinding.FragmentPeopleBinding;
@@ -23,6 +25,7 @@ import com.example.anticafe.databinding.FragmentPeopleBinding;
 public class PeopleFragment extends Fragment {
     private PeopleViewModel mViewModel;
     private FragmentPeopleBinding binding;
+    private Person.Role role;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -32,10 +35,12 @@ public class PeopleFragment extends Fragment {
 
         mViewModel = new ViewModelProvider(this).get(PeopleViewModel.class);
 
+        switch (ServiceLocator.getInstance().getPerson().getRole()){
+
+        }
+
         View v = binding.getRoot();
         mViewModel.getAllGames().observe(getViewLifecycleOwner(), games -> {
-            /*Log.d("PeopleFragment_Anticafe", games.get(0).getName());
-            Log.d("PeopleFragment_Anticafe", games.get(0).getBackground_img());*/
             binding.peopleRecyclerView.setAdapter(
                     new PeopleAdapter(
                             this,
@@ -43,18 +48,12 @@ public class PeopleFragment extends Fragment {
                             games.stream().map(Game::getBackground_img).collect(toList())
                     )
             );
-            /*for (int i = 1; i < 20; i++){
-                Log.d("PeopleFragment_Anticafe", games.get(i).getName());
-                if (games.get(i).getBackground_img() == null){
-                    Log.d("PeopleFragment_Anticafe", "Not found img");
-                }else{
-                    Log.d("PeopleFragment_Anticafe", games.get(i).getBackground_img());
-                }
-
-            }*/
         });
 
         binding.peopleRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+
         return v;
     }
 }

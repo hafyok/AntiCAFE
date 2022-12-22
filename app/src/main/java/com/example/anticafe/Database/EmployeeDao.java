@@ -9,30 +9,29 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 
-import com.example.anticafe.Model.Employee;
-import com.example.anticafe.Model.Spaces;
+import com.example.anticafe.Model.Entity.EmployeeEntity;
 
 import java.util.List;
 
 @Dao
 public interface EmployeeDao {
 
-    @Query("SELECT * FROM employee")
-    LiveData<List<Employee>> getAll();
+    @Query("SELECT * FROM EmployeeEntity")
+    LiveData<List<EmployeeEntity>> getAll();
 
-    @Query("SELECT * FROM employee WHERE id = :id")
-    com.example.anticafe.Model.Employee getById(long id);
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(Employee employee);
+    @Query("SELECT * FROM EmployeeEntity WHERE id = :id")
+    EmployeeEntity getById(long id);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAll(Employee[] employees);
+    void insert(EmployeeEntity employee);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertAll(EmployeeEntity[] employees);
 
     @Update
-    void update(Employee employee);
+    void update(EmployeeEntity employee);
 
     @Delete
-    void delete(Employee employee);
+    void delete(EmployeeEntity employee);
 
 }

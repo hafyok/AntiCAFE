@@ -8,8 +8,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.anticafe.Model.Employee;
-import com.example.anticafe.Model.Spaces;
+import com.example.anticafe.Model.Entity.Spaces;
 
 import java.util.List;
 

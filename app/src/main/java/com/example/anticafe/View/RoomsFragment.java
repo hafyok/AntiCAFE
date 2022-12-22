@@ -2,9 +2,7 @@ package com.example.anticafe.View;
 
 import static java.util.stream.Collectors.toList;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -20,13 +18,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.anticafe.Database.SpacesDao;
-import com.example.anticafe.MainActivity;
-import com.example.anticafe.Model.Employee;
-import com.example.anticafe.Model.Records;
-import com.example.anticafe.Model.Spaces;
+import com.example.anticafe.Model.Entity.EmployeeEntity;
+import com.example.anticafe.ServiceLocator;
 import com.example.anticafe.ViewModels.RoomsViewModel;
 import com.example.anticafe.databinding.RoomsFragmentBinding;
 
@@ -55,6 +50,19 @@ public class RoomsFragment extends Fragment {
             }
         });
 
+        switch (ServiceLocator.getInstance().getPerson().getRole()){
+            case Admin:
+                binding.addRecord.setVisibility(View.VISIBLE);
+                binding.addDeleteVoder.setVisibility(View.VISIBLE);
+                binding.deleteRecord.setVisibility(View.VISIBLE);
+            case Moder:
+                binding.addRecord.setVisibility(View.VISIBLE);
+                binding.deleteRecord.setVisibility(View.VISIBLE);
+            case User:
+                break;
+
+        }
+
         View v = binding.getRoot();
 
         binding.RoomsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -71,7 +79,7 @@ public class RoomsFragment extends Fragment {
             binding.RoomsRecyclerView.setAdapter(
                     new RoomsAdapter(
                             this,
-                            employees.stream().map(Employee::getName).collect(toList())
+                            employees.stream().map(EmployeeEntity::getName).collect(toList())
                     )
             );
         }

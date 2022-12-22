@@ -14,6 +14,8 @@ android {
 
         // RAWG API Key
         buildConfigField "String", "RAWG_API_KEY", "\"3ab80a416c614edcabcfe4eb78c435e0\""
+        // VK_API key
+        buildConfigField "String", "CLIENT_ID", "\"51501804\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,8 +31,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
     }
 }
 
@@ -70,4 +72,8 @@ dependencies {
     implementation 'com.ekn.gruzer.rawg:rawgapiwrapper:0.1.0'
 
     implementation 'com.github.bumptech.glide:glide:4.14.2'
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment:2.3.5"
+    implementation "androidx.navigation:navigation-ui:2.3.5"
 }

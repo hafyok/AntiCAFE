@@ -1,4 +1,4 @@
-package com.example.anticafe.Model;
+package com.example.anticafe.Model.Entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

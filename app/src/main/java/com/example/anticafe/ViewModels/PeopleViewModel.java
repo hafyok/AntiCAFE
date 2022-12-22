@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.anticafe.Model.Game;
-import com.example.anticafe.GameRepository;
+import com.example.anticafe.Database.Repository.GameRepository;
 
 import java.util.List;
 

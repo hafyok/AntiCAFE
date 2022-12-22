@@ -24,4 +24,10 @@
     <string name="stay_updated">Stay updated with the latest movies</string>
 
     <string name="available_game">Список доступных игр на наших игровых устройствах: </string>
+
+    <string name="pass">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="auth">Войти</string>
+    <string name="vk_in">Войти через вконтакте</string>
+
 </resources>

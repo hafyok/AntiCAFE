@@ -1,12 +1,12 @@
-package com.example.anticafe.Model;
+package com.example.anticafe.Model.Entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Employee {
-    public Employee(String name, long salary) {
+public class EmployeeEntity {
+    public EmployeeEntity(String name, long salary) {
         this.name = name;
         this.salary = salary;
     }
